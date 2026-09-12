@@ -1,0 +1,14 @@
+venv/
+.env
+__pycache__/
+*.pyc
+data/output/
+
+src/news_scraper_anthropic.py
+src/news_scraper_ars.py
+src/news_scraper_deepmind.py
+src/news_scraper_huggingface.py
+src/news_scraper_openai.py
+src/news_scraper_venturebeat.py
+data/yc_ai.html
+

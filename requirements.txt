@@ -1,0 +1,14 @@
+aiohttp
+beautifulsoup4
+python-dotenv
+pydantic
+tenacity
+pandas
+gspread
+google-auth
+playwright
+requests
+feedparser
+pyarrow
+openpyxl
+reportlab
