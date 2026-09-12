@@ -26,16 +26,19 @@ def flatten_startups(records):
     rows = []
 
     for record in records:
-        content = record.get("content", {})
-        source = record.get("source", {})
-
         rows.append({
-            "schemaVersion": record.get("schemaVersion"),
-            "recordType": record.get("recordType"),
-            "entityName": content.get("entityName"),
-            "employeeCount": content.get("employeeCount"),
-            "sourceName": source.get("name"),
-            "sourceUrl": source.get("url"),
+            "schemaVersion": record.get("schemaVersion", "1.0"),
+            "recordType": record.get("recordType", "STARTUP"),
+            "entityName": record.get(
+                "entityName",
+                record.get("name")
+            ),
+            "employeeCount": record.get("employeeCount"),
+            "sourceName": record.get(
+                "sourceName",
+                "Y Combinator"
+            ),
+            "sourceUrl": record.get("sourceUrl"),
             "collectedAt": record.get("collectedAt")
         })
 
